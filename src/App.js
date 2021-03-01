@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+
+
+import Convert from './convert.js';
 
 function App() {
+  const [name, setName] = useState('');
+
+  const handleSubmit = event => {
+    event.preventDefault();
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <form onSubmit={handleSubmit}>
+        <label>
+          Put your english name :  
+          <input
+            type='text'
+            value={name}
+            onChange={e => setName(e.target.value)}
+          />
+        </label>
+      </form>
+      {name} is translated into :
+      {
+        name ?
+        <Convert
+          text={name}
+          language='en'
+        />
+        : null
+      }
     </div>
   );
 }
