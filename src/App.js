@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import GlobalFonts from './font/fonts.js';
 
 import Convert from './convert.js';
 
@@ -12,6 +12,7 @@ function App() {
 
   return (
     <div>
+      <GlobalFonts />
       <form onSubmit={handleSubmit}>
         <label>
           Put your english name :  

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
+import {GyouzanFont} from './japaneseTranslate.js';
+
 const Convert = ({ text, language }) => {
   const [convertedText, setConvertedText] = useState('');
 
@@ -28,9 +30,9 @@ const Convert = ({ text, language }) => {
   }, [text, language]);
 
   return (
-  	<div>
+  	<GyouzanFont>
 	  {convertedText}
-  	</div>
+  	</GyouzanFont>
   );
 };
 
