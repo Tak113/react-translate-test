@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import GlobalFonts from './font/fonts.js';
 
-import Convert from './convert.js';
+import Convert from './convert/convert.js';
 
 function App() {
   const [name, setName] = useState('');
