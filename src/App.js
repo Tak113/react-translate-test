@@ -30,7 +30,11 @@ function App() {
           text={name}
           language='en'
         />
-        : null
+        :
+        <Convert
+          text="Ken"
+          language="en"
+        />
       }
     </div>
   );

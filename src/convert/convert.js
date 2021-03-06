@@ -2,7 +2,10 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 import LowCase from '../lowcase/lowCase.js';
-import { GyouzanFont } from './convert.styles.js';
+import {TshirtContainer,
+        BackgroundImage,
+        FontPosition,
+        } from './convert.styles.js';
 
 const Convert = ({ text, language }) => {
   const [convertedText, setConvertedText] = useState('');
@@ -31,11 +34,14 @@ const Convert = ({ text, language }) => {
   }, [text, language]);
 
   return (
-  	<GyouzanFont>
-  		<LowCase
-  			name={convertedText}
-  		/>
-  	</GyouzanFont>
+    <TshirtContainer>
+      <BackgroundImage />
+        <FontPosition>
+  	  	  <LowCase
+  	  	  	name={convertedText}
+  	  	  />
+        </FontPosition>
+    </TshirtContainer>
   );
 };
 
