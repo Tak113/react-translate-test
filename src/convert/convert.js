@@ -7,7 +7,8 @@ import {TshirtContainer,
         FontPosition,
         } from './convert.styles.js';
 
-const Convert = ({ text, language }) => {
+const Convert = ({ text, language, fontType }) => {
+  console.log(fontType);
   const [convertedText, setConvertedText] = useState('');
 
   //from Irie-san
@@ -25,6 +26,7 @@ const Convert = ({ text, language }) => {
       	endPoint,
       )
       .then((response) => {
+        
         // console.log(response.data.text)
       	setConvertedText(response.data.text);
       })
