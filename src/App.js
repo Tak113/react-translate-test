@@ -20,6 +20,7 @@ function App() {
     event.preventDefault();
     setName(formData.name)
     setFont(formData.font)
+    console.log(formData)
   }
 
   const handleChange = event => {
@@ -40,7 +41,7 @@ function App() {
             <input
               type='text'
               name='name'
-              value={formData.name || ''}
+              value={formData.name}
               onChange={handleChange}
             />
           </label>
@@ -48,14 +49,40 @@ function App() {
         <fieldset>
           <label>
             <p>Font Type</p>
+            <div className='radio-container'>
+              <div>
+                <label>Katakana : </label>
+                <input
+                  type='radio'
+                  name='font'
+                  value='katakana'
+                  onChange={handleChange}
+                  checked={font=='katakana'}
+                  className='radio-button'
+                />
+              </div>
+              <div>
+                <label>Hiragana : </label>
+                <input
+                  type='radio'
+                  name='font'
+                  value='hiragana'
+                  onChange={handleChange}
+                  check={font=='hiragana'}
+                  className='radio-button'
+                />
+              </div>
+            </div>
+          {/*
             <select
               name='font'
               onChange={handleChange}
-              value={formData.font || 'katakana'}
+              value={formData.font}
             >
               <option value="hiragana">Hiragana</option>
               <option value="katakana">Katakana</option>
             </select>
+          */}
           </label>
         </fieldset>
         <button type='submit'>Submit</button>
