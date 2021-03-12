@@ -10,7 +10,7 @@ export const FontPosition = styled.div`
 
 export const TshirtContainer = styled.div`
 	width: 500px;
-	position: absolute;
+	position: relative;
 	display: flex;
 	align-items: center;
 	height: 500px;

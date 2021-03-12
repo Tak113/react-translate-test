@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-import LowCase from '../lowcase/lowCase.js';
+import GooTranslate from '../goo/goo.component';
 import {TshirtContainer,
         BackgroundImage,
         FontPosition,
         } from './convert.styles.js';
 
 const Convert = ({ text, language, fontType }) => {
-  console.log(fontType);
+  // console.log(fontType);
   const [convertedText, setConvertedText] = useState('');
 
   //from Irie-san
@@ -38,11 +38,12 @@ const Convert = ({ text, language, fontType }) => {
   return (
     <TshirtContainer>
       <BackgroundImage />
-        <FontPosition>
-  	  	  <LowCase
-  	  	  	name={convertedText}
-  	  	  />
-        </FontPosition>
+      <FontPosition>
+        <GooTranslate
+          name={convertedText}
+          fontType={fontType}
+        />
+      </FontPosition>
     </TshirtContainer>
   );
 };

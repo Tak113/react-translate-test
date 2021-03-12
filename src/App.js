@@ -11,8 +11,13 @@ const formReducer = (state, event) => {
   }
 }
 
+const initialState = {
+  name: 'Ken',
+  font: 'katakana',
+}
+
 function App() {
-  const [formData, setFormData] = useReducer(formReducer, {});
+  const [formData, setFormData] = useReducer(formReducer, initialState);
   const [name, setName] = useState('Ken');
   const [font, setFont] = useState('katakana');
 
@@ -20,7 +25,7 @@ function App() {
     event.preventDefault();
     setName(formData.name)
     setFont(formData.font)
-    console.log(formData)
+    // console.log(formData)
   }
 
   const handleChange = event => {
@@ -33,7 +38,7 @@ function App() {
   return (
     <div className='wrapper'>
       <GlobalFonts />
-      <h1>Your Name in Japanese Tshirt</h1>
+      <h1>Your Name in Japanese Calligraphy Tshirt</h1>
       <form onSubmit={handleSubmit}>
         <fieldset>
           <label>
@@ -57,7 +62,7 @@ function App() {
                   name='font'
                   value='katakana'
                   onChange={handleChange}
-                  checked={font=='katakana'}
+                  checked={formData.font==='katakana'}
                   className='radio-button'
                 />
               </div>
@@ -68,7 +73,7 @@ function App() {
                   name='font'
                   value='hiragana'
                   onChange={handleChange}
-                  check={font=='hiragana'}
+                  checked={formData.font==='hiragana'}
                   className='radio-button'
                 />
               </div>
@@ -92,6 +97,14 @@ function App() {
         language='en'
         fontType={font}
       />
+      <a href="http://www.goo.ne.jp/">
+        <img
+          className="goo-image"
+          src="//u.xgoo.jp/img/sgoo.png"
+          alt="supported by goo"
+          title="supported by goo"
+         />
+      </a>
     </div>
   );
 }

@@ -16,3 +16,7 @@ fieldset {
   vertical-align: middle;
   margin-top:-1px;
 }
+
+.goo-image {
+	width: 200px;
+}
