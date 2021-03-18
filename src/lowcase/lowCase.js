@@ -8,7 +8,7 @@ const LowCase = ({ name }) => {
 
 	return (
 		<TextBox>
-			{reactStringReplace(name, /(ッ|ャ|ュ|ョ|ァ|ィ|ゥ|ェ|ォ)/g, (match, i) => (
+			{reactStringReplace(name, /(ッ|ャ|ュ|ョ|ァ|ィ|ゥ|ェ|ォ|っ|ゃ|ゅ|ょ|ぁ|ぃ|ぅ|ぇ|ぉ)/g, (match, i) => (
 				<LetterSpace key={i}>{match}</LetterSpace>
 			))}
 			<LabelIcon

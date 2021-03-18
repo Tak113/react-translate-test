@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/google-translate-test/static/css/main.56b5c5a6.chunk.css",
-    "main.js": "/google-translate-test/static/js/main.b3fddc4f.chunk.js",
-    "main.js.map": "/google-translate-test/static/js/main.b3fddc4f.chunk.js.map",
-    "runtime-main.js": "/google-translate-test/static/js/runtime-main.3f27ea13.js",
-    "runtime-main.js.map": "/google-translate-test/static/js/runtime-main.3f27ea13.js.map",
-    "static/js/2.460598a7.chunk.js": "/google-translate-test/static/js/2.460598a7.chunk.js",
-    "static/js/2.460598a7.chunk.js.map": "/google-translate-test/static/js/2.460598a7.chunk.js.map",
-    "static/js/3.05281984.chunk.js": "/google-translate-test/static/js/3.05281984.chunk.js",
-    "static/js/3.05281984.chunk.js.map": "/google-translate-test/static/js/3.05281984.chunk.js.map",
+    "main.css": "/google-translate-test/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/google-translate-test/static/js/main.a7d9f3eb.chunk.js",
+    "main.js.map": "/google-translate-test/static/js/main.a7d9f3eb.chunk.js.map",
+    "runtime-main.js": "/google-translate-test/static/js/runtime-main.e72ab508.js",
+    "runtime-main.js.map": "/google-translate-test/static/js/runtime-main.e72ab508.js.map",
+    "static/js/2.542d6e0b.chunk.js": "/google-translate-test/static/js/2.542d6e0b.chunk.js",
+    "static/js/2.542d6e0b.chunk.js.map": "/google-translate-test/static/js/2.542d6e0b.chunk.js.map",
+    "static/js/3.4f2447a2.chunk.js": "/google-translate-test/static/js/3.4f2447a2.chunk.js",
+    "static/js/3.4f2447a2.chunk.js.map": "/google-translate-test/static/js/3.4f2447a2.chunk.js.map",
     "index.html": "/google-translate-test/index.html",
-    "static/css/main.56b5c5a6.chunk.css.map": "/google-translate-test/static/css/main.56b5c5a6.chunk.css.map",
-    "static/js/2.460598a7.chunk.js.LICENSE.txt": "/google-translate-test/static/js/2.460598a7.chunk.js.LICENSE.txt",
+    "static/css/main.6dea0f05.chunk.css.map": "/google-translate-test/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.542d6e0b.chunk.js.LICENSE.txt": "/google-translate-test/static/js/2.542d6e0b.chunk.js.LICENSE.txt",
     "static/media/KouzanGyoushoOTF.7685a634.woff": "/google-translate-test/static/media/KouzanGyoushoOTF.7685a634.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.3f27ea13.js",
-    "static/js/2.460598a7.chunk.js",
-    "static/css/main.56b5c5a6.chunk.css",
-    "static/js/main.b3fddc4f.chunk.js"
+    "static/js/runtime-main.e72ab508.js",
+    "static/js/2.542d6e0b.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.a7d9f3eb.chunk.js"
   ]
 }
