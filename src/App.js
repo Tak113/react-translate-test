@@ -2,7 +2,6 @@ import React, { useState, useReducer } from 'react';
 import GlobalFonts from './font/fonts.js';
 
 import {Fieldset,
-        Wrapper,
         RadioContainer,
         RadioButton,
         GooImage,
@@ -10,10 +9,15 @@ import {Fieldset,
         TextFieldName,
         RadioGroupContainer,
         FormLabelContainer,
+        Wrapper,
+        WrapperContainer,
         } from './App.styles';
 
 import Convert from './convert/convert.js';
-import {FormLabel,
+
+import { makeStyles } from '@material-ui/core/styles';
+import {Container,
+        FormLabel,
         RadioGroup,
         FormControlLabel,
         Radio,
@@ -30,6 +34,12 @@ const initialState = {
   name: 'Edward',
   font: 'hiragana',
 }
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+}));
 
 function App() {
   const [formData, setFormData] = useReducer(formReducer, initialState);
@@ -51,62 +61,69 @@ function App() {
   }
 
   return (
-    <Wrapper>
+    <Container maxWidth = 'lg'>
       <GlobalFonts />
       <h1>Your Name in Japanese Calligraphy Tshirt</h1>
-      <form onSubmit={handleSubmit}>
-        <TextFieldName
-          id='standard-secondary'
-          label='Your English Name'
-          color='secondary'
-          name='name'
-          value={formData.name}
-          onChange={handleChange}
-        />
-
-        <FormLabelContainer component='legend'>Font Type</FormLabelContainer>
-        <RadioGroupContainer aria-label='fonttype' name='fonttype'>
-          <FormControlLabel value='katakana' label='Katakana' control={
-            <Radio
-              name='font'
-              value='katakana'
+      <Wrapper>
+        <WrapperContainer>
+          <form onSubmit={handleSubmit}>
+            <TextFieldName
+              id='standard-secondary'
+              label='Your English Name'
+              color='secondary'
+              name='name'
+              value={formData.name}
               onChange={handleChange}
-              checked={formData.font==='katakana'}
             />
-          }/>
-          <FormControlLabel value='hiragana' label='Hiragana' control={
-            <Radio
-              name='font'
-              value='hiragana'
-              onChange={handleChange}
-              checked={formData.font=='hiragana'}
-            />
-          }/>
-        </RadioGroupContainer>
-
-        <SubmitButton
-          type='submit'
-          variant='contained'
-          color='default'
-        >
-          Submit
-        </SubmitButton>
-        
-      </form>
-      <Convert
-        text={name}
-        language='en'
-        fontType={font}
-      />
-      <a href="http://www.goo.ne.jp/">
-        <GooImage
-          className="goo-image"
-          src="//u.xgoo.jp/img/sgoo.png"
-          alt="supported by goo"
-          title="supported by goo"
-         />
-      </a>
-    </Wrapper>
+            <FormLabelContainer component='legend'>Font Type</FormLabelContainer>
+            <RadioGroupContainer aria-label='fonttype' name='fonttype'>
+              <FormControlLabel value='katakana' label='Katakana' control={
+                <Radio
+                  name='font'
+                  value='katakana'
+                  onChange={handleChange}
+                  checked={formData.font==='katakana'}
+                />
+              }/>
+              <FormControlLabel value='hiragana' label='Hiragana' control={
+                <Radio
+                  name='font'
+                  value='hiragana'
+                  onChange={handleChange}
+                  checked={formData.font=='hiragana'}
+                />
+              }/>
+            </RadioGroupContainer>
+            <SubmitButton
+              type='submit'
+              variant='contained'
+              color='default'
+              size='large'
+            >
+              Submit
+            </SubmitButton>
+          </form>
+          <p>Put your english name, select japanese font type, and submit. You will see your name in japanese calligraphy on Tshirt!</p>
+          <p>*This is not a final version, but is based on google and goo translate API. Once we receive your order we will manually confirm to make sure we translate correctly.</p>
+          <p>*There are few translation bugs and we don't gurantee the translation used in the app</p>
+        </WrapperContainer>
+        <WrapperContainer>
+          <Convert
+            text={name}
+            language='en'
+            fontType={font}
+          />
+          <a href="http://www.goo.ne.jp/">
+            <GooImage
+              className="goo-image"
+              src="//u.xgoo.jp/img/sgoo.png"
+              alt="supported by goo"
+              title="supported by goo"
+             />
+          </a>
+        </WrapperContainer>
+      </Wrapper>
+    </Container>
   );
 }
 
