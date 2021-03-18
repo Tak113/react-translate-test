@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/google-translate-test/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/google-translate-test/static/js/main.a7d9f3eb.chunk.js",
-    "main.js.map": "/google-translate-test/static/js/main.a7d9f3eb.chunk.js.map",
-    "runtime-main.js": "/google-translate-test/static/js/runtime-main.e72ab508.js",
-    "runtime-main.js.map": "/google-translate-test/static/js/runtime-main.e72ab508.js.map",
-    "static/js/2.542d6e0b.chunk.js": "/google-translate-test/static/js/2.542d6e0b.chunk.js",
-    "static/js/2.542d6e0b.chunk.js.map": "/google-translate-test/static/js/2.542d6e0b.chunk.js.map",
-    "static/js/3.4f2447a2.chunk.js": "/google-translate-test/static/js/3.4f2447a2.chunk.js",
-    "static/js/3.4f2447a2.chunk.js.map": "/google-translate-test/static/js/3.4f2447a2.chunk.js.map",
+    "main.js": "/google-translate-test/static/js/main.86ccbebe.chunk.js",
+    "main.js.map": "/google-translate-test/static/js/main.86ccbebe.chunk.js.map",
+    "runtime-main.js": "/google-translate-test/static/js/runtime-main.ba25e2e0.js",
+    "runtime-main.js.map": "/google-translate-test/static/js/runtime-main.ba25e2e0.js.map",
+    "static/js/2.765d0bd2.chunk.js": "/google-translate-test/static/js/2.765d0bd2.chunk.js",
+    "static/js/2.765d0bd2.chunk.js.map": "/google-translate-test/static/js/2.765d0bd2.chunk.js.map",
+    "static/js/3.2b7c9169.chunk.js": "/google-translate-test/static/js/3.2b7c9169.chunk.js",
+    "static/js/3.2b7c9169.chunk.js.map": "/google-translate-test/static/js/3.2b7c9169.chunk.js.map",
     "index.html": "/google-translate-test/index.html",
     "static/css/main.6dea0f05.chunk.css.map": "/google-translate-test/static/css/main.6dea0f05.chunk.css.map",
-    "static/js/2.542d6e0b.chunk.js.LICENSE.txt": "/google-translate-test/static/js/2.542d6e0b.chunk.js.LICENSE.txt",
+    "static/js/2.765d0bd2.chunk.js.LICENSE.txt": "/google-translate-test/static/js/2.765d0bd2.chunk.js.LICENSE.txt",
     "static/media/KouzanGyoushoOTF.7685a634.woff": "/google-translate-test/static/media/KouzanGyoushoOTF.7685a634.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.e72ab508.js",
-    "static/js/2.542d6e0b.chunk.js",
+    "static/js/runtime-main.ba25e2e0.js",
+    "static/js/2.765d0bd2.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.a7d9f3eb.chunk.js"
+    "static/js/main.86ccbebe.chunk.js"
   ]
 }
