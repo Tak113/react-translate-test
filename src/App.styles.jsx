@@ -23,6 +23,20 @@ export const RadioButton = styled.input`
 
 export const GooImage = styled.img`
 	width: 150px;
+
+	@media screen and (max-width: 500px) {
+		width: 100px;
+	}
+`;
+
+export const ImageContainer = styled.a`
+	text-align: right;
+	margin-right: 5em;
+
+	@media screen and (max-width: 500px) {
+		margin-right: 1em;
+	}
+
 `;
 
 export const SubmitButton = styled(Button)`
@@ -62,16 +76,41 @@ export const Wrapper = styled.div`
 	flex-direction: row;
 	width:100%;
 
-	@media screen and (max-width: 800px) {
+	@media screen and (max-width: 1000px) {
   		flex-direction: column;
   		align-items: center;
   		width: 100%;
   	}
 `;
 
-export const WrapperContainer = styled.div`
+export const WrapperContainerForm = styled.div`
 	display:flex;
 	flex-direction: column;
-	width:100%;
+	width:40%;
+	margin:40px 20px;
+
+	@media screen and (max-width: 1000px) {
+		width: 90%;
+		margin: 20px 0 20px 0;
+	}
+`;
+
+export const WrapperContainerImage = styled.div`
+	display:flex;
+	flex-direction: column;
+	width:60%;
+	margin: 20px;
+
+	@media screen and (max-width: 1000px) {
+		width: 90%;
+		margin: 20px 0 20px 0;
+	}
+`;
+
+export const TitleText = styled.h1`
 	margin:20px;
+`;
+
+export const ParagraphText = styled.p`
+	text-align: justify;
 `;

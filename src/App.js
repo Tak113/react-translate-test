@@ -4,13 +4,17 @@ import GlobalFonts from './font/fonts.js';
 import {Fieldset,
         RadioContainer,
         RadioButton,
+        ImageContainer,
         GooImage,
         SubmitButton,
         TextFieldName,
         RadioGroupContainer,
         FormLabelContainer,
         Wrapper,
-        WrapperContainer,
+        WrapperContainerForm,
+        WrapperContainerImage,
+        TitleText,
+        ParagraphText,
         } from './App.styles';
 
 import Convert from './convert/convert.js';
@@ -63,9 +67,9 @@ function App() {
   return (
     <Container maxWidth = 'lg'>
       <GlobalFonts />
-      <h1>Your Name in Japanese Calligraphy Tshirt</h1>
+      <TitleText>Your Name in Japanese Calligraphy Tshirt</TitleText>
       <Wrapper>
-        <WrapperContainer>
+        <WrapperContainerForm>
           <form onSubmit={handleSubmit}>
             <TextFieldName
               id='standard-secondary'
@@ -103,25 +107,25 @@ function App() {
               Submit
             </SubmitButton>
           </form>
-          <p>Put your english name, select japanese font type, and submit. You will see your name in japanese calligraphy on Tshirt!</p>
-          <p>*This is not a final version, but is based on google and goo translate API. Once we receive your order we will manually confirm to make sure we translate correctly.</p>
-          <p>*There are few translation bugs and we don't gurantee the translation used in the app</p>
-        </WrapperContainer>
-        <WrapperContainer>
+          <ParagraphText>Put your english name, select japanese font type, and submit. You will see your name in japanese calligraphy on Tshirt!</ParagraphText>
+          <ParagraphText>*This is not a final version, but is based on google and goo translate API. Once we receive your order we will manually confirm to make sure we translate correctly.</ParagraphText>
+          <ParagraphText>*There are few translation bugs and we don't gurantee the translation used in the app</ParagraphText>
+        </WrapperContainerForm>
+        <WrapperContainerImage>
           <Convert
             text={name}
             language='en'
             fontType={font}
           />
-          <a href="http://www.goo.ne.jp/">
+          <ImageContainer href="http://www.goo.ne.jp/">
             <GooImage
               className="goo-image"
               src="//u.xgoo.jp/img/sgoo.png"
               alt="supported by goo"
               title="supported by goo"
-             />
-          </a>
-        </WrapperContainer>
+            />
+          </ImageContainer>
+        </WrapperContainerImage>
       </Wrapper>
     </Container>
   );
