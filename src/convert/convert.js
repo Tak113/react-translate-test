@@ -21,7 +21,9 @@ const Convert = ({ text, language, fontType }) => {
   // console.log(endPoint);
 
   useEffect(() => {
-    const response = axios
+    console.log("text", text);
+    if (text) {
+     const response = axios
       .get(
       	endPoint,
       )
@@ -33,6 +35,7 @@ const Convert = ({ text, language, fontType }) => {
       .catch((err) => {
         console.log('rest api error', err);
       });
+    }
   }, [text, language]);
 
   return (

@@ -1,5 +1,5 @@
 {
-  "homepage": "https://tak113.github.io/google-translate-test",
+  "homepage": "/",
   "name": "google-translate",
   "version": "0.1.0",
   "private": true,
@@ -9,11 +9,15 @@
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.0",
     "axios": "^0.21.1",
+    "query-string": "^7.0.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-ga4": "^1.4.1",
+    "react-router-dom": "^6.2.1",
     "react-scripts": "4.0.3",
     "react-string-replace": "^0.4.4",
     "react-use-kana": "^2.3.0",
+    "sass": "^1.45.2",
     "styled-components": "^5.2.1",
     "web-vitals": "^1.1.0"
   },
