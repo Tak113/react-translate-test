@@ -1,18 +1,40 @@
 .gfooter {
-  width: 300px;
+  width: 600px;
+  max-width: 100%;
   margin: 0 auto;
   text-align: center;
-  .back {
+  .btn-group {
     padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    justify-content: space-around;
     a {
-      color: #666;
+      color: #fff;
+      background: #333;
       padding: 10px 20px;
-      border: 2px solid #ccc;
+      margin-bottom: 20px;
+      width: 250px;
+      max-width: 80%;
       &:hover {
-        background: #ccc;
+        background: #666;
       }
-      &:before {
-        content: "> ";
+      &:after {
+        content: " >";
+      }
+      &.back {
+        color: #666;
+        background: #fff;
+        border: 2px solid #ccc;
+        &:hover {
+          background: #ccc;
+        }
+        &:before {
+          content: "< ";
+        }
+      &:after {
+        content: "";
+      }
       }
     }
   }
