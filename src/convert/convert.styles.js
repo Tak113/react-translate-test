@@ -7,7 +7,7 @@ export const FontPosition = styled.div`
 	width: 70%;
         text-align: center;
 	position: absolute;
-	top: 160px;
+	top: 120px;
 	left: calc(15%);
 	margin: 0 auto;
 	//writing-mode: vertical-lr;
@@ -22,7 +22,7 @@ export const FontPosition = styled.div`
 	}
 	@media screen and (max-width: 400px) {
 		height: 150px;
-		top: 80px;
+		top: 70px;
 	}
 
 `;
@@ -32,8 +32,8 @@ export const TshirtContainer = styled.div`
 	position: relative;
 	display: flex;
 	align-items: center;
-	height: 500px;
-	font-size: 50px;
+	height: 400px;
+	font-size: 40px;
 	font-family: 'Font Name';
 	letter-spacing: -5px;
 	workd-wrap: break-word;

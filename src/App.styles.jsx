@@ -67,7 +67,8 @@ export const RadioGroupContainer = styled(RadioGroup)`
 
 export const FormLabelContainer = styled(FormLabel)`
 	&& {
-		margin-top: 30px;
+		margin-top: 15px;
+		font-size: 0.8rem;
 	}
 `;
 
