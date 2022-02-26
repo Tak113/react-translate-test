@@ -28,6 +28,7 @@ import {Container,
         RadioGroup,
         FormControlLabel,
         Radio,
+        Tooltip,
         } from '@material-ui/core';
 
 import "slick-carousel/slick/slick.css";
@@ -110,7 +111,7 @@ function App(props) {
           <p className={class_no_inventory}>- Sorry, We don't have an inventory for the name. -</p>
         </div>
         <div className="samples">
-          <p>We can create by following font type. If you like it, pleaseproceed with “Go to Special Order” to order your personalized product. </p>
+          <p>Your japanese calligraphy can be created by following font type. If you like it, please proceed with “Go to Special Order” to order your personalized product. </p>
           <Slider {...slider_pc}>
             <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f29269739_370x.progressive.jpg" /></div>
             <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f25def567_370x.progressive.jpg" /></div>
@@ -136,7 +137,7 @@ function App(props) {
             <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f08ec9ee4_370x.progressive.jpg" /></div>
           </Slider>
         </div>
-	<p>Put Your English Name, select japanese font type, and submit. You will see your name in japanese calligraphy on Tshirt!</p>
+	<p>Meanwhile, you can simulate what your japanese calligraphy looks. Put your english name and select japanese font type, and you will see your name in japanese calligraphy on Tshirt!</p>
         <div className="tshirt">
           <div className="form">
             <form>
@@ -152,22 +153,28 @@ function App(props) {
               <FormLabelContainer component='legend'>Font Type</FormLabelContainer>
               <RadioGroupContainer aria-label='fonttype' name='fonttype'>
                 <FormControlLabel value='katakana' label='Katakana' control={
-                  <Radio
-                    name='font'
-                    value='katakana'
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    checked={formData.font==='katakana'}
-                  />
+                  <Tooltip title = "Hiragana and katakana are the two syllabaries in Japanese. Hiragana is used to form the grammar of the sentence and katakana is used primarily to write words that have been imported from other languages, e.g. coffee, table, and so forth."
+                   arrow>
+                    <Radio
+                      name='font'
+                      value='katakana'
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      checked={formData.font==='katakana'}
+                    />
+                  </Tooltip>
                 }/>
                 <FormControlLabel value='hiragana' label='Hiragana' control={
-                  <Radio
-                    name='font'
-                    value='hiragana'
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    checked={formData.font=='hiragana'}
-                  />
+                  <Tooltip title = "Hiragana and katakana are the two syllabaries in Japanese. Hiragana is used to form the grammar of the sentence and katakana is used primarily to write words that have been imported from other languages, e.g. coffee, table, and so forth."
+                   arrow>
+                    <Radio
+                      name='font'
+                      value='hiragana'
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      checked={formData.font=='hiragana'}
+                    />
+                  </Tooltip>
                 }/>
               </RadioGroupContainer>
             </form>
@@ -190,10 +197,10 @@ function App(props) {
         </div>
         <div className="conversion">
           <a href="https://shop.mionosuke.com/pages/special-order">Go to Special Order</a>
-	  <p>If you like it, please proceed with requesting special order at navigation bar and we will create your product into our inventory so you can purchase. </p>
-	  <p>*This is not a final version, but is based on google and goo translate API. Once we receive your order we will manually confirm to make sure we translate correctly.</p>
-	  <p>*The simulation here goes with horizontal direction, but you can choose either vertical (traditional) or horizontal. Please specify when you are in special order.</p>
-	  <p>*There are few translation bugs and we don’t gurantee the translation used in the app</p>
+	  <p>If you like it, please proceed with "Go to Special Order" to order your personalized product.</p>
+	  <p className="note">*This is not a final version, but is based on google and goo translate API. Once we receive your order we will manually confirm to make sure we translate correctly.</p>
+	  <p className="note">*The simulation here goes with horizontal direction, but you can choose either vertical (traditional) or horizontal. Please specify when you are in special order.</p>
+	  <p className="note">*There are few translation bugs and we don’t gurantee the translation used in the app</p>
         </div>
         <Footer />
       </div>

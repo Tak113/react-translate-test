@@ -68,3 +68,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+## How to use github pages with React app
+
+Reference : [How to use github pages with react app][https://dev.to/yuribenjamin/how-to-deploy-react-app-in-github-pages-2a1f]
+
+* `npm install gh-pages --save-dev`
+* `npm run build`
+* Once you update `master` repo it will directry create `gh-pages` repo which will be used for github pages
