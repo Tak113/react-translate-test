@@ -109,35 +109,23 @@ function App(props) {
           <h1 className="for-sale">Special Order is Now On Sale with No Extra Charge.</h1>
           <p className={class_no_inventory}>- Sorry, We don't have an inventory for the name. -</p>
         </div>
-        <div className="samples">
-          <p>We can create by following font type. If you like it, pleaseproceed with “Go to Special Order” to order your personalized product. </p>
-          <Slider {...slider_pc}>
-            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f29269739_370x.progressive.jpg" /></div>
-            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f25def567_370x.progressive.jpg" /></div>
-            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f22bc0348_370x.progressive.jpg" /></div>
-            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f1f640829_370x.progressive.jpg" /></div>
-            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f17a1a69d_370x.progressive.jpg" /></div>
-            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f13ded3ef_370x.progressive.jpg" /></div>
-            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f108b098c_370x.progressive.jpg" /></div>
-            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f0d060e3d_370x.progressive.jpg" /></div>
-            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f08ec9ee4_370x.progressive.jpg" /></div>
-            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f08ec9ee4_370x.progressive.jpg" /></div>
-          </Slider>
-          <Slider {...slider_sp}>
-            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f29269739_370x.progressive.jpg" /></div>
-            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f25def567_370x.progressive.jpg" /></div>
-            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f22bc0348_370x.progressive.jpg" /></div>
-            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f1f640829_370x.progressive.jpg" /></div>
-            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f17a1a69d_370x.progressive.jpg" /></div>
-            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f13ded3ef_370x.progressive.jpg" /></div>
-            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f108b098c_370x.progressive.jpg" /></div>
-            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f0d060e3d_370x.progressive.jpg" /></div>
-            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f08ec9ee4_370x.progressive.jpg" /></div>
-            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f08ec9ee4_370x.progressive.jpg" /></div>
-          </Slider>
-        </div>
 	<p>Put Your English Name, select japanese font type, and submit. You will see your name in japanese calligraphy on Tshirt!</p>
         <div className="tshirt">
+          <div className="image">
+            <Convert
+              text={name}
+              language='en'
+              fontType={font}
+            />
+            <ImageContainer href="http://www.goo.ne.jp/">
+              <GooImage
+                className="goo-image"
+                src="//u.xgoo.jp/img/sgoo.png"
+                alt="supported by goo"
+                title="supported by goo"
+            />
+            </ImageContainer>
+          </div>
           <div className="form">
             <form>
               <TextFieldName
@@ -149,7 +137,6 @@ function App(props) {
                 onChange={handleChange}
                 onBlur={handleBlur}
               />
-              <FormLabelContainer component='legend'>Font Type</FormLabelContainer>
               <RadioGroupContainer aria-label='fonttype' name='fonttype'>
                 <FormControlLabel value='katakana' label='Katakana' control={
                   <Radio
@@ -172,21 +159,6 @@ function App(props) {
               </RadioGroupContainer>
             </form>
           </div>
-          <div className="image">
-            <Convert
-              text={name}
-              language='en'
-              fontType={font}
-            />
-            <ImageContainer href="http://www.goo.ne.jp/">
-              <GooImage
-                className="goo-image"
-                src="//u.xgoo.jp/img/sgoo.png"
-                alt="supported by goo"
-                title="supported by goo"
-            />
-            </ImageContainer>
-          </div>
         </div>
         <div className="conversion">
           <a href="https://shop.mionosuke.com/pages/special-order">Go to Special Order</a>
@@ -194,6 +166,33 @@ function App(props) {
 	  <p>*This is not a final version, but is based on google and goo translate API. Once we receive your order we will manually confirm to make sure we translate correctly.</p>
 	  <p>*The simulation here goes with horizontal direction, but you can choose either vertical (traditional) or horizontal. Please specify when you are in special order.</p>
 	  <p>*There are few translation bugs and we don’t gurantee the translation used in the app</p>
+        </div>
+        <div className="samples">
+          <p>We can create by following font type. If you like it, pleaseproceed with “Go to Special Order” to order your personalized product. </p>
+          <Slider {...slider_pc}>
+            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f29269739_370x.progressive.jpg" /></div>
+            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f25def567_370x.progressive.jpg" /></div>
+            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f22bc0348_370x.progressive.jpg" /></div>
+            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f1f640829_370x.progressive.jpg" /></div>
+            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f17a1a69d_370x.progressive.jpg" /></div>
+            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f13ded3ef_370x.progressive.jpg" /></div>
+            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f108b098c_370x.progressive.jpg" /></div>
+            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f0d060e3d_370x.progressive.jpg" /></div>
+            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f08ec9ee4_370x.progressive.jpg" /></div>
+            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f058da007_370x.progressive.jpg" /></div>
+          </Slider>
+          <Slider {...slider_sp}>
+            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f29269739_370x.progressive.jpg" /></div>
+            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f25def567_370x.progressive.jpg" /></div>
+            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f22bc0348_370x.progressive.jpg" /></div>
+            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f1f640829_370x.progressive.jpg" /></div>
+            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f17a1a69d_370x.progressive.jpg" /></div>
+            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f13ded3ef_370x.progressive.jpg" /></div>
+            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f108b098c_370x.progressive.jpg" /></div>
+            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f0d060e3d_370x.progressive.jpg" /></div>
+            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f08ec9ee4_370x.progressive.jpg" /></div>
+            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f058da007_370x.progressive.jpg" /></div>
+          </Slider>
         </div>
         <Footer />
       </div>

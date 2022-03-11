@@ -108,6 +108,9 @@ code {
     .conversion {
       width: calc(100%);
       padding: 0px;
+      a {
+        margin-top: 0px;
+      }
     }
     .samples {
       width: 100%;

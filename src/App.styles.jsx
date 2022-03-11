@@ -22,7 +22,7 @@ export const RadioButton = styled.input`
 `;
 
 export const GooImage = styled.img`
-	width: 150px;
+	width: 100px;
 
 	@media screen and (max-width: 500px) {
 		width: 100px;
@@ -31,7 +31,8 @@ export const GooImage = styled.img`
 
 export const ImageContainer = styled.a`
 	text-align: right;
-	margin-right: 5em;
+	margin-top: -5em;
+        display: inline-block;
 
 	@media screen and (max-width: 500px) {
 		margin-right: 1em;
@@ -62,6 +63,7 @@ export const RadioGroupContainer = styled(RadioGroup)`
 	&& {
 		display: flex;
 		flex-direction: row;
+		justify-content: center;
 	}
 `;
 

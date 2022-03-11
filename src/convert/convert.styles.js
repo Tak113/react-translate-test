@@ -3,7 +3,7 @@ import styled from 'styled-components';
 //vertical direction
 //ref : https://www.webcreatorbox.com/tech/writing-mode
 export const FontPosition = styled.div`
-	height: 300px;
+	height: 200px;
 	width: 70%;
         text-align: center;
 	position: absolute;
@@ -13,7 +13,7 @@ export const FontPosition = styled.div`
 	//writing-mode: vertical-lr;
 
 	@media screen and (max-width: 600px) {
-		height: 250px;
+		height: 200px;
 		top: 120px;
 	}
 	@media screen and (max-width: 450px) {
@@ -32,7 +32,7 @@ export const TshirtContainer = styled.div`
 	position: relative;
 	display: flex;
 	align-items: center;
-	height: 400px;
+	height: 320px;
 	font-size: 40px;
 	font-family: 'Font Name';
 	letter-spacing: -5px;
@@ -40,7 +40,7 @@ export const TshirtContainer = styled.div`
 	margin: 0 auto;
 
 	@media screen and (max-width: 600px) {
-		height: 400px;
+		height: 320px;
 		font-size: 40px;
 	}
 	@media screen and (max-width: 450px) {
