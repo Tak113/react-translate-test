@@ -110,9 +110,7 @@ function App(props) {
           <h1 className="for-sale">Special Order is Now On Sale with No Extra Charge.</h1>
           <p className={class_no_inventory}>- Sorry, We don't have an inventory for the name. -</p>
         </div>
-<<<<<<< HEAD
 	<p>Put Your English Name, select japanese font type, and submit. You will see your name in japanese calligraphy on Tshirt!</p>
-=======
         <div className="samples">
           <p>Your japanese calligraphy can be created by following font type. If you like it, please proceed with “Go to Special Order” to order your personalized product. </p>
           <Slider {...slider_pc}>
@@ -199,7 +197,7 @@ function App(props) {
           </div>
         </div>
         <div className="conversion">
-          <a href="https://shop.mionosuke.com/pages/special-order">Go to Special Order</a>
+          <a href="https://shop.mionosuke.com/collections/special-order">Go to Special Order</a>
 	  <p>If you like it, please proceed with "Go to Special Order" to order your personalized product.</p>
 	  <p className="note">*This is not a final version, but is based on google and goo translate API. Once we receive your order we will manually confirm to make sure we translate correctly.</p>
 	  <p className="note">*The simulation here goes with horizontal direction, but you can choose either vertical (traditional) or horizontal. Please specify when you are in special order.</p>
