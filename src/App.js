@@ -111,35 +111,6 @@ function App(props) {
           <p className={class_no_inventory}>- Sorry, We don't have an inventory for the name. -</p>
         </div>
 	<p>Put Your English Name, select japanese font type, and submit. You will see your name in japanese calligraphy on Tshirt!</p>
-        <div className="samples">
-          <p>Your japanese calligraphy can be created by following font type. If you like it, please proceed with “Go to Special Order” to order your personalized product. </p>
-          <Slider {...slider_pc}>
-            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f29269739_370x.progressive.jpg" /></div>
-            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f25def567_370x.progressive.jpg" /></div>
-            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f22bc0348_370x.progressive.jpg" /></div>
-            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f1f640829_370x.progressive.jpg" /></div>
-            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f17a1a69d_370x.progressive.jpg" /></div>
-            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f13ded3ef_370x.progressive.jpg" /></div>
-            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f108b098c_370x.progressive.jpg" /></div>
-            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f0d060e3d_370x.progressive.jpg" /></div>
-            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f08ec9ee4_370x.progressive.jpg" /></div>
-            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f08ec9ee4_370x.progressive.jpg" /></div>
-          </Slider>
-          <Slider {...slider_sp}>
-            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f29269739_370x.progressive.jpg" /></div>
-            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f25def567_370x.progressive.jpg" /></div>
-            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f22bc0348_370x.progressive.jpg" /></div>
-            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f1f640829_370x.progressive.jpg" /></div>
-            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f17a1a69d_370x.progressive.jpg" /></div>
-            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f13ded3ef_370x.progressive.jpg" /></div>
-            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f108b098c_370x.progressive.jpg" /></div>
-            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f0d060e3d_370x.progressive.jpg" /></div>
-            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f08ec9ee4_370x.progressive.jpg" /></div>
-            <div><img src="https://cdn.shopify.com/s/files/1/0553/2978/4000/products/unisex-premium-viscose-hemp-t-shirt-snowflake-front-61f4f08ec9ee4_370x.progressive.jpg" /></div>
-          </Slider>
-        </div>
-	<p>Meanwhile, you can simulate what your japanese calligraphy looks. Put your english name and select japanese font type, and you will see your name in japanese calligraphy on Tshirt!</p>
->>>>>>> f4417f5b8cf99d5f038c389d580d5ffac8ed6df5
         <div className="tshirt">
           <div className="image">
             <Convert
